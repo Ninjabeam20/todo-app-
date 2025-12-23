@@ -2,84 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deleted To-Dos</title>
-    
-    <!-- Bootstrap CSS for styling -->
+    <title>Deleted Todos</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- DataTables CSS -->
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css">
-    
-    <!-- Custom CSS -->
+    <link href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container mt-5">
-        <div class="row justify-content-center">
-            <div class="col-md-10">
-                <div class="d-flex justify-content-between align-items-center mb-4">
-                    <h1 class="mb-0">Deleted To-Dos</h1>
-                    <a href="index.html" class="btn btn-primary">
-                        ← Back to To-Do List
-                    </a>
-                </div>
-                
-                <!-- Search Bar Section -->
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <div class="input-group">
-                            <span class="input-group-text">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                                </svg>
-                            </span>
-                            <input type="text" 
-                                   id="searchInput" 
-                                   class="form-control" 
-                                   placeholder="Search deleted tasks..."
-                                   aria-label="Search deleted tasks">
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Deleted Todos Table -->
-                <div class="card">
-                    <div class="card-body">
-                        <table id="deletedTable" class="table table-striped table-hover" style="width:100%">
-                            <thead>
-                                <tr>
-                                    <th>Status</th>
-                                    <th>Task</th>
-                                    <th>Created</th>
-                                    <th>Deleted</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <!-- DataTables will populate this -->
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+<div class="container mt-5">
+    <div class="d-flex justify-content-between mb-4">
+        <h2>Deleted Todos</h2>
+        <a href="index.html" class="btn btn-primary">Back</a>
     </div>
 
-    <!-- jQuery (required for DataTables) -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <!-- DataTables JS -->
-    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
-    
-    <!-- Moment.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
-    
-    <!-- Custom JavaScript for deleted page -->
-    <script src="deleted.js"></script>
+    <table id="deletedTable" class="table table-striped">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Completed</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+<script src="deleted.js"></script>
 </body>
 </html>
-
