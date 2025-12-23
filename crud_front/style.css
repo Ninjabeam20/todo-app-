@@ -1,0 +1,114 @@
+/* Completed todo styling - struck off and less visible */
+.completed-task {
+    text-decoration: line-through;
+    opacity: 0.5;
+    color: #6c757d;
+    font-style: italic;
+}
+
+/* Table row styling for completed todos */
+#todosTable tbody tr.completed-row,
+#deletedTable tbody tr.completed-row {
+    opacity: 0.6;
+    background-color: #f8f9fa !important;
+}
+
+#todosTable tbody tr.completed-row:hover,
+#deletedTable tbody tr.completed-row:hover {
+    opacity: 0.8;
+}
+
+/* Deleted todos row styling */
+#deletedTable tbody tr.deleted-row {
+    background-color: #fff3cd !important;
+}
+
+#deletedTable tbody tr.deleted-row:hover {
+    background-color: #ffe69c !important;
+}
+
+/* General styling */
+body {
+    background-color: #f5f5f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 8px;
+}
+
+h1 {
+    color: #333;
+    font-weight: 600;
+}
+
+#todoInput {
+    border-radius: 4px 0 0 4px;
+}
+
+#addBtn {
+    border-radius: 0 4px 4px 0;
+    font-weight: 500;
+}
+
+#todosTable {
+    margin-top: 20px;
+}
+
+#todosTable thead th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #495057;
+    border-bottom: 2px solid #dee2e6;
+}
+
+#todosTable tbody td {
+    vertical-align: middle;
+    padding: 12px;
+}
+
+.form-check-input {
+    cursor: pointer;
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.delete-btn {
+    padding: 4px 12px;
+    font-size: 0.875rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 1.75rem;
+    }
+    
+    #todosTable {
+        font-size: 0.9rem;
+    }
+}
+
+/* DataTables search and pagination styling */
+.dataTables_wrapper .dataTables_filter input {
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    padding: 6px 12px;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    border-radius: 4px;
+    margin: 0 2px;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    background: #0d6efd !important;
+    border-color: #0d6efd !important;
+}
+
