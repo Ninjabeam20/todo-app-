@@ -20,9 +20,20 @@
         <a href="deleted.html" class="btn btn-outline-secondary">Deleted Tasks</a>
     </div>
 
-    <div class="input-group mb-3">
-        <input id="todoInput" class="form-control" placeholder="Enter todo">
-        <button id="addBtn" class="btn btn-primary">Add</button>
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <input id="todoInput" class="form-control" placeholder="Enter todo">
+        </div>
+        <div class="col-md-3">
+            <select id="prioritySelect" class="form-select">
+                <option value="low">Low</option>
+                <option value="medium" selected>Medium</option>
+                <option value="high">High</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <button id="addBtn" class="btn btn-primary w-100">Add</button>
+        </div>
     </div>
 
     <table id="todosTable" class="table table-striped">
@@ -30,6 +41,7 @@
             <tr>
                 <th>Done</th>
                 <th>Title</th>
+                <th>Priority</th>
                 <th>Created</th>
                 <th>Action</th>
             </tr>
