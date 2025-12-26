@@ -9,3 +9,114 @@ table td {
 s {
     color: #888;
 }
+
+/* Navbar Styles */
+.navbar-custom {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 0.75rem 1rem;
+}
+
+.navbar-logo {
+    height: 64px;
+    width: auto;
+    object-fit: contain;
+}
+
+.navbar-nav-custom {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.navbar-home-btn {
+    color: #333;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.navbar-home-btn:hover {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.account-icon-wrapper {
+    position: relative;
+    cursor: pointer;
+}
+
+.account-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #007bff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    transition: background-color 0.2s;
+}
+
+.account-icon:hover {
+    background-color: #0056b3;
+}
+
+.account-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 0.5rem;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    min-width: 200px;
+    display: none;
+    z-index: 1000;
+}
+
+.account-dropdown.show {
+    display: block;
+}
+
+.dropdown-header {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #eee;
+    font-weight: 600;
+    color: #333;
+}
+
+.dropdown-item {
+    padding: 0.75rem 1rem;
+    display: block;
+    color: #333;
+    text-decoration: none;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+}
+
+.dropdown-item.logout {
+    color: #dc3545;
+    border-top: 1px solid #eee;
+}
+
+.dropdown-item.logout:hover {
+    background-color: #fff5f5;
+    color: #dc3545;
+}
+
+/* Adjust container margin when navbar is present */
+body.has-navbar .container {
+    margin-top: 2rem !important;
+}
